@@ -6,8 +6,10 @@ class Ping:
 
     def __init__(self):
         if len(sys.argv) > 0:
-
-            self.ping_server(sys.argv[1])
+            try:
+                self.ping_server(sys.argv[1])
+            except:
+                print("An error occured")
 
 
         else:
